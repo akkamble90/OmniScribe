@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      # FIX: Install Linux system dependencies for Magic and Tesseract
+      # Install Linux system dependencies for Magic and Tesseract
       - name: Install System Dependencies
         run: |
           sudo apt-get update
@@ -24,7 +24,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # Inject Secrets to prevent Groq/HuggingFace errors
       - name: Verify Architecture
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           python -c "import agents.graph; import utils.vector_db; print('Structure Validated!')"
 
