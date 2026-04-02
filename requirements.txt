@@ -1,0 +1,17 @@
+streamlit
+langgraph
+langchain-groq
+langchain-chroma
+langchain-community
+langchain-huggingface
+pypdf
+python-dotenv
+sentence-transformers
+pytest
+flake8
+python-docx
+beautifulsoup4
+pytesseract
+pandas
+fpdf2
+python-magic-bin

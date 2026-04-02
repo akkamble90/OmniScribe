@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Local Data (Don't upload your private PDFs or DB)
+data/chroma_db/
+data/*.pdf
+data/*.docx
+data/*.png
+data/*.jpg
+
+# OS
+.DS_Store
+Thumbs.db

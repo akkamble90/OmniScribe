@@ -1,0 +1,27 @@
+name: Legal Agent CI
+on: [push]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Verify Architecture
+        run: |
+          python -c "import agents.graph; import utils.vector_db; print('Structure Validated!')"
+
+      # Added Docker Build Step
+      - name: Build Docker Image
+        run: |
+          docker build -t legal-agent:latest .
