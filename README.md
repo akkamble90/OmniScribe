@@ -8,7 +8,7 @@ Built with **LangGraph**, **Llama-3.3-70B**, and **Streamlit**, it utilizes a so
 
 ##  Key Features
 
-- **Multi-Agent Orchestration:** - 🔍 **Researcher:** Precisely retrieves document "DNA" from a ChromaDB vector store.
+- **Multi-Agent Orchestration:** -  **Researcher:** Precisely retrieves document "DNA" from a ChromaDB vector store.
   -  **Analyst:** Synthesizes complex answers grounded strictly in the provided context.
   -  **Critic (The Auditor):** Performs a "Senior Peer Review" pass to flag generic filler and verify citations.
 - **Universal Domain Awareness:** Specialized protocols for:
