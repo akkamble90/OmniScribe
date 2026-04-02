@@ -4,6 +4,7 @@ langchain-groq
 langchain-chroma
 langchain-community
 langchain-huggingface
+langchain-text-splitters
 pypdf
 python-dotenv
 sentence-transformers
@@ -14,4 +15,5 @@ beautifulsoup4
 pytesseract
 pandas
 fpdf2
-python-magic-bin
+python-magic-bin; sys_platform == 'win32'
+python-magic; sys_platform == 'linux'
