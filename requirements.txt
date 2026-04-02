@@ -17,3 +17,5 @@ pandas
 fpdf2
 python-magic-bin; sys_platform == 'win32'
 python-magic; sys_platform == 'linux'
+torchvision
+protobuf==3.20.3
